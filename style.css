@@ -1,0 +1,358 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("https://i.imgur.com/ATuBpvX.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+.page-container {
+    padding: 60px 20px;
+}
+
+h1, h2, h3, p {
+    text-shadow: 0 0 5px black;
+}
+
+a
+ {
+    color: yellow;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffd500;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 10px; 
+    
+    transition: transform 0.35s cubic-bezier(.25,.8,.25,1),
+                background-color 0.35s cubic-bezier(.25,.8,.25,1),
+                box-shadow 0.35s cubic-bezier(.25,.8,.25,1);
+}
+
+.btn:hover {
+    background-color: #f4c20d;
+    transform: scale(1.12);
+}
+
+.topnav {
+    width: 100%;
+    background: rgba(0,0,0,0.55);
+    padding: 15px;
+    text-align: center;
+}
+.topnav a {
+    color: #fff;
+    margin: 0 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.topnav a:hover {
+    text-decoration: underline;
+}
+body { padding-top: 0px; }
+
+.diy-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.diy-img {
+    width: 350px;
+    border-radius: 20px;
+}
+
+.diy-text {
+    max-width: 450px;
+    text-align: left;
+}
+
+.diy-text h1 {
+    margin-top: 0;
+}
+
+.example-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.example-box {
+    background: #f2d401;
+    width: 160px;
+    padding: 25px;
+    border-radius: 45px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2.0;
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.25);
+}
+
+.example-box h3 {
+    margin: 0 0 10px 0;
+    font: size 22px;
+    font-weight: 50;
+    text-align: center;
+}
+
+
+.example-box ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.bottom-note {
+    margin-top: 30px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: white;
+    line-height: 1.4;
+}
+
+/* -------------------------------------- */
+/* TEXT HOVER → GREEN                     */
+/* -------------------------------------- */
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
+p:hover, li:hover, ul:hover, ol:hover, span:hover {
+    color: #3c9654 !important;
+    transition: color 0.25s ease-in-out;
+}
+
+/* -------------------------------------- */
+/* NAVIGATION BAR LINK HOVER              */
+/* -------------------------------------- */
+
+.topnav a {
+    transition: 0.3s ease;
+}
+
+.topnav a :hover {
+    color: #174523 !important;
+    transform: scale(1.1);
+}
+
+/* -------------------------------------- */
+/* BUTTON HOVER EFFECT                    */
+/* -------------------------------------- */
+
+.btn, button, input[type=button], input[type=submit] {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.btn:hover,
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+    background-color: #0a4f1c !important; /* dark green */
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.35);
+}
+
+/* -------------------------------------- */
+/* IMAGE HOVER EFFECT (FADE + SCALE)      */
+/* -------------------------------------- */
+
+img {
+    transition: 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* -------------------------------------- */
+/* CARD / PAGE HOVER GLOW                 */
+/* -------------------------------------- */
+
+.page:hover {
+    transition: 0.4s ease-in-out;
+    filter: drop-shadow(0 0 18px rgba(40,255,120,0.3));
+}
+
+/* -------------------------------------- */
+/* GLOBAL SMOOTH TRANSITIONS              */
+/* -------------------------------------- */
+
+* {
+    transition: 0.2s ease-in-out;
+}
+
+.page {
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.topnav a {
+    position: relative;
+    overflow: hidden;
+}
+
+.topnav a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #0a4f1c;
+    transition: width 0.3s ease-in-out;
+}
+
+.topnav a:hover::after {
+    width: 100%;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover {
+    text-shadow: 0 0 12px rgba(10,79,28,0.4);
+}
+
+img.floating {
+    animation: floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(10,79,28,0.2);
+}
+
+
+.example-box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;                /* tighter spacing */
+    padding: 20px 40px;       /* balanced sides */
+    max-width: 1200px;        /* centers them nicely */
+    margin: 0 auto;           /* center the whole grid */
+}
+
+.example-box {
+    background: linear-gradient(145deg, #1a331a, #0f260f);
+    border-radius: 25px;
+    padding: 25px;
+    margin: 0 !important;    
+    color: #e8ffe8;
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        inset 0 0 8px rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hover Elevation */
+.example-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.45),
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Title Styling */
+.example-box h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px; /* smaller so it fits tighter */
+    color: #b9ffb9;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0, 100, 0, 0.5);
+}
+
+/* List Style */
+.example-box ul {
+    margin: 0;
+    padding-left: 18px; 
+    list-style: "▸ ";
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.example-box li {
+    margin-bottom: 5px;
+    transition: 0.2s ease;
+}
+
+/* List Hover */
+.example-box li:hover {
+    transform: translateX(5px);
+    color: #90ff90;
+}
+
+/* Bottom Note */
+.bottom-note {
+    text-align: center;
+    max-width: 900px;
+    margin: 30px auto; 
+    font-size: 20px;
+    color: #e8ffe8;
+}
+
+.group-photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* centers every row */
+    gap: 25px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;  /* centers photos in each row */
+    align-items: center;
+    gap: 40px;                /* even spacing between pictures */
+}
+
+.member {
+    text-align: center;
+}
+
+.member img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #00000020;
+}

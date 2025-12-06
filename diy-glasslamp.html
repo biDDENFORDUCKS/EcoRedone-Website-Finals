@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EcoReDone</title>
+<link href="style.css" rel="stylesheet"/>
+
+<style>
+/* Guide layout styling */
+.diy-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Title */
+.diy-title {
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Materials */
+.diy-sub {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Layout for image + steps */
+.diy-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Image styling */
+.diy-img {
+    width: 190px;
+    border-radius: 25px;
+}
+
+/* Steps section */
+.diy-steps {
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.diy-steps h3 {
+    color: white;
+}
+
+/* Back button styling */
+.btn {
+    display: inline-block;
+    background-color: #f2d401;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #e1c200;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .diy-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    .diy-img {
+        width: 90%;
+    }
+    .diy-steps {
+        text-align: center;
+    }
+    .video-container {
+        width: 100%;
+    }
+}
+
+/* Responsive YouTube container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    max-width: 100%;
+    margin: 30px auto;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav class="topnav">
+    <a href="homepage.html">Home</a>
+    <a href="biodegradable.html">Biodegradable</a>
+    <a href="nonbio.html">Non-Biodegradable</a>
+    <a href="recycle.html">Recycle</a>
+    <a href="ewaste.html">E-Waste</a>
+    <a href="diy.html">DIY</a>
+    <a href="about.html">About</a>
+</nav>
+
+<div class="page-container">
+    <div class="page" id="diy-glasslamp">
+
+        <div class="diy-wrapper">
+
+            <!-- Title -->
+            <div class="diy-title">GLASS BOTTLE NIGHT LAMP</div>
+            <div class="diy-sub">Materials: Glass bottle, fairy lights, tape</div>
+
+            <!-- Image + Steps -->
+            <div class="diy-layout">
+
+                <img src="https://i.imgur.com/WClSNqf.jpeg" class="diy-img" alt="Glass Bottle Night Lamp"/>
+
+                <div class="diy-steps">
+                    <h3>How to make:</h3>
+                    <p>
+                        1. Insert fairy lights into the bottle <br>
+                        2. Tape or secure the wire at the back <br>
+                        3. Decorate the bottle if desired <br>
+                        4. Light it up and enjoy!
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- YouTube Video -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/3nSXDjk6LWg" title="DIY: HOW TO MAKE LIGHT UP BOTTLES | Super Simple" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <!-- Back Button -->
+            <a class="btn" href="diy-nonbio.html">Back</a>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
